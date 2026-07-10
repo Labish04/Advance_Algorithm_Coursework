@@ -19,7 +19,7 @@ import time
 import random
 import csv
 import statistics as stats
-from data_structures import BST, AVLTree, MinHeap, HashTable, City
+from data_structure import BST, AVLTree, MinHeap, HashTable, City
 
 N_VALUES = [100, 1_000, 10_000]
 N_SEARCH_SAMPLES = 100   # number of search probes per trial (averaged)
@@ -165,11 +165,11 @@ def run_all():
         print(f"n={n} done "
               f"(BST height rand={bh}/sorted={bh2}, AVL height rand={ah}/sorted={ah2})")
 
-    with open("results.csv", "w", newline="") as f:
+    with open("Task1Results.csv", "w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=["n", "order", "structure", "insert", "search", "delete", "height"])
         writer.writeheader()
         writer.writerows(rows)
-    print("Saved results.csv")
+    print("Saved Task1Results.csv")
     return rows
 
 

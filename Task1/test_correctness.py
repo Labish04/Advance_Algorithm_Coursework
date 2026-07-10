@@ -3,7 +3,7 @@ Correctness tests for Task 1 data structures.
 Run: python3 test_correctness.py
 """
 import random
-from data_structures import BST, AVLTree, MinHeap, HashTable, generate_cities, City
+from data_structure import BST, AVLTree, MinHeap, HashTable, generate_cities, City
 
 
 def check_avl_balanced(node):
